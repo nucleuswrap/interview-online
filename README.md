@@ -1,3 +1,14 @@
+# System requirements
+
+## Java
+* Java 16 or newer
+* junit-jupiter 5.8.1
+* There is a Maven `pom.xml` included in the `java` directory that can be used to build the project. If you're not familiar with maven, you can copy and paste the `.java` files into your IDE of choice and run the unit test manually.
+
+## JavaScript
+* node 14
+* Run `npm install` from the `javascript` directory
+
 # Nucleus practical coding questions
 
 **Background**
