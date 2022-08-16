@@ -6,6 +6,8 @@ package com.nucleusfinancial.interview.code;
 // [1,2,3]=>[1,2,4]
 // [1,9]=>[2,0]
 
+// bla
+
 public class AddOne {
 
     public static int[] addOne(int[] figures) {
