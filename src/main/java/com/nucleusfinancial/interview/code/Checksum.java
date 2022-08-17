@@ -17,7 +17,14 @@ public class Checksum {
     private static final int LIMIT = 10000007;
 
     public static long computeChecksum(int[] numberArray) {
-        return 0;
+        long result = 0;
+        for (int currentNumber : numberArray) {
+            result += currentNumber;
+            result *= SEED;
+            result = (result % LIMIT);
+        }
+
+        return result;
     }
 
 }

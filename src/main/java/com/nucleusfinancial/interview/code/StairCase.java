@@ -12,7 +12,20 @@ package com.nucleusfinancial.interview.code;
 public class StairCase {
 
     public static String stairCase(int number) {
-        return "";
+        String staircase = "";
+
+        for (int i = 1; i <= number; i++) {
+            int spacesToAdd = number - i;
+            String currentLine = "";
+            for (int j = 0; j < spacesToAdd; j++) {
+                currentLine += " ";
+            }
+            for (int j = 0; j < i; j++) {
+                currentLine += "#";
+            }
+            staircase += (currentLine + (i < number ? "\n" : ""));
+        }
+        return staircase;
     }
 
 }

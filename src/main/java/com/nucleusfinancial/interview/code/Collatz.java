@@ -14,9 +14,19 @@ package com.nucleusfinancial.interview.code;
 // Return the number of iterations taken.
 
 public class Collatz {
-
     public static long getNumberOfIterations(int x) {
-        return 0;
+        long numberOfIterations = 0;
+
+        while( x > 1 ) {
+            numberOfIterations++;
+            if(x % 2 == 0) {
+                x /= 2;
+            } else {
+                x = 3 * x + 1;
+            }
+        }
+
+        return numberOfIterations;
     }
 
 }

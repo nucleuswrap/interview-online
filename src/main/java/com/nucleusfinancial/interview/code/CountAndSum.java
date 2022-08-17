@@ -7,6 +7,16 @@ package com.nucleusfinancial.interview.code;
 
 public class CountAndSum {
     public static int[] countPositivesSumNegatives(int[] arr) {
-        return new int[] { 0, 0 };
+        int[] totals = new int[] { 0, 0 };
+
+        for (int currentNumber : arr) {
+            if(currentNumber > 0) {
+                totals[0] += 1;
+            } else {
+                totals[1] += currentNumber;
+            }
+        }
+
+        return totals;
     }
 }
