@@ -10,8 +10,25 @@ public class AddOne {
 
     public static int[] addOne(int[] figures) {
         validateArray(figures);
-        int[] result = figures;
-        return result;
+        return addOneWithIndex(figures, figures.length - 1);
+        // int[] result = figures;
+        // return result;
+    }
+
+    private static int[] addOneWithIndex(int[] figures, int index) {
+        int figureAtIndex = figures[index];
+        if (figureAtIndex < 9) {
+            figures[index] = figureAtIndex + 1;
+            return figures;
+        }
+        figures[index] = 0;
+        if (index == 0) {
+            int[] temp = new int[figures.length + 1];
+            System.arraycopy(figures, 0, temp, 1, figures.length);
+            temp[0] = 1;
+            return temp;
+        }
+        return addOneWithIndex(figures, index - 1);
     }
 
     private static void validateArray(int[] figures) {

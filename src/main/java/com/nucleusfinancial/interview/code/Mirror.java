@@ -9,6 +9,11 @@ package com.nucleusfinancial.interview.code;
 
 public class Mirror {
     public static boolean isMirror(char[] values) {
-        return false;
+        for (int i = 0, j = values.length - 1; i < j; i++, j--) {
+            if (values[i] != values[j]) {
+                return false;
+            }
+        }
+        return true;
     }
 }

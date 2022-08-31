@@ -11,7 +11,14 @@ package com.nucleusfinancial.interview.code;
 
 public class StairCase {
 
+    private static final String SPACE=" ";
+
     public static String stairCase(int number) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < number; i++) {
+            int spaces = number - i;
+            // builder.append(String.format());
+        }
         return "";
     }
 

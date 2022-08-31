@@ -16,7 +16,21 @@ package com.nucleusfinancial.interview.code;
 public class Collatz {
 
     public static long getNumberOfIterations(int x) {
-        return 0;
+        if (x == 0) {
+            return 0;
+        }
+        int numberOfIterations = 1;
+        while ( (x = collatz(x)) > 1) {
+            numberOfIterations++;
+        }
+        return numberOfIterations;
+    }
+
+    private static int collatz(int input) {
+        if (input % 2 == 0) {
+            return input / 2;
+        }
+        return 3 * input + 1;
     }
 
 }

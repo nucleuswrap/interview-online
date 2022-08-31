@@ -7,11 +7,9 @@ import java.util.List;
 public class Foo {
 
     public long countElements(List<Integer> ints) {
-        // if (ints == null) {
-        // return 0;
-        // }
-        // return ints.stream().filter(i -> i % 2 == 0).count();
-
-        return 0;
+        if (ints == null) {
+            return 0;
+        }
+        return ints.stream().count();
     }
 }
